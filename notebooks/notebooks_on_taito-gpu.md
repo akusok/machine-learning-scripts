@@ -25,7 +25,7 @@ The `srun` command reserves a gpu and opens a shell on one of the compute nodes.
 option `-t` sets the time limit in the format `HH:MM:SS`, the option `--mem` sets the memory 
 reservation, and `--gres=gpu:X` reserves `X` GPUs (1<=`X`<=4).
 
-    srun -p gpu --gres=gpu:1 -t 04:00:00 --mem=8G --pty $SHELL
+    srun -p gpu --gres=gpu:k80:1 -t 04:00:00 --mem=8G --pty $SHELL
     hostname  # you need this information later
     .local/bin/jupyter-notebook --no-browser --port=8899
 
